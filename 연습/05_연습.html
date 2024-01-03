@@ -50,14 +50,24 @@
         </fieldset> <br>
         <fieldset>
             <legend>추가 정보</legend>
-            성별 : <input type="radio" name="gender" value="남자"> 남자 <input type="radio" name="gender" value="여자"> 여자 <br><br>
+            성별 : <input type="radio" name="gender" id="man" value="남자">
+            <label for="man">남자</label>
+            <input type="radio" name="gender" id="woman" value="여자"> 여자 <br><br>
+            <label for="woman">여자</label>
+
             생년월일 : <input type="date"> <br><br>
             취미 <br>
-            <input type="checkbox" name="야구" name="hobby" value="야구"> 야구
-            <input type="checkbox" name="야구" name="hobby" value="농구"> 농구
-            <input type="checkbox" name="야구" name="hobby" value="축구"> 축구 <br>
-            <input type="checkbox" name="야구" name="hobby" value="공부"> 공부
-            <input type="checkbox" name="야구" name="hobby" value="음악감상"> 음악감상
+            <input type="checkbox"  name="hobby" id="baseball" value="야구"> 
+            <label for="baseball">야구</label> 
+
+            <input type="checkbox"  name="hobby" id="basketball" value="농구"> 
+            <label for="basketball">농구</label>
+            <input type="checkbox"  name="hobby" id="soccer" value="축구"> 
+            <label for="soccer">축구</label><br>
+            <input type="checkbox"  name="hobby" id="study" value="공부"> 
+            <label for="study">공부</label>
+            <input type="checkbox"  name="hobby" id="music" value="음악감상"> 
+            <label for="music">음악감상</label> 
             <br><br>
 
             자기소개 <br>
