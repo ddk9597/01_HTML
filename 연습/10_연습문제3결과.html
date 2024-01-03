@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>피자 주문 결과</title>
+
+  <style>
+    .container {   margin: 100px auto;   border: 3px solid black;   width: 450px;   padding: 10px;  }
+    h1{text-align: center; margin: 30px 0 !important;}
+    .container * { margin-bottom: 10px; }
+    .container li>strong{ display: inline-block; width: 120px;}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 style="color:orangered">피자 주문 내역</h1>
+    <hr>
+
+    <ul>
+      <li><strong>고객명 :</strong> <span id="clientName"></span></li>
+      <li><strong>전화번호 :</strong> <span id="clientPhone"></span></li>
+      <li><strong>Email :</strong> <span id="clientEmail"></span></li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li><strong>피자 종류 :</strong> <span id="pizza"></span></li>
+      <li><strong>사이즈 :</strong> <span id="size"></span></li>
+      <li><strong>선택한 토핑 :</strong> <span id="topping"></span></li>
+      <li><strong>희망 배송 시간 :</strong> <span id="wishTime"></span></li>
+    </ul>
+
+    <hr>
+    <h4>요청사항</h4> 
+    <pre id="request"></pre>
+
+  </div>
+
+
+  <script>
+    const params = new URL(location.href).searchParams;
+    const arr = [];
+    document.querySelectorAll("ul span, pre").forEach(item => arr.push(item.id));
+    arr.forEach(id => document.getElementById(id).innerText = params.get(id));
+    document.getElementById("topping").innerText = params.getAll("topping").join(", ");
+  </script>
+</body>
+
+</html>

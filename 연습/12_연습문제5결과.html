@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 가입 입력 정보</title>
+
+  <style>
+    .container {   margin: 100px auto;   border: 3px solid black;   width: 450px;   padding: 10px;  }
+    h1{text-align: center; margin: 30px 0 !important;}
+    .container * { margin-bottom: 10px; }
+    .container li>strong{ display: inline-block; width: 120px;}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 style="color:green">회원 가입 입력 정보</h1>
+    <hr>
+
+    <ul>
+      <li><strong>ID :</strong> <span id="id"></span></li>
+      <li><strong>비밀번호 :</strong> <span id="pw1"></span></li>
+      <li><strong>비밀번호 확인 :</strong> <span id="pw2"></span></li>
+      <li><strong>이메일 :</strong> <span id="email1"></span><span id="email2"></span></li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li><strong>성별 :</strong> <span id="gender"></span></li>
+      <li><strong>생년월일 :</strong> <span id="birthday"></span></li>
+      <li><strong>취미 :</strong> <span id="hobby"></span></li>
+    </ul>
+
+    <hr>
+    <h4>자기소개</h4> 
+    <pre id="intro"></pre>
+
+  </div>
+
+
+  <script>
+    const params = new URL(location.href).searchParams;
+    const arr = [];
+    document.querySelectorAll("ul span, pre").forEach(item => arr.push(item.id));
+    arr.forEach(id => document.getElementById(id).innerText = params.get(id));
+    document.getElementById("hobby").innerText = params.getAll("hobby").join(", ");
+  </script>
+</body>
+
+</html>
