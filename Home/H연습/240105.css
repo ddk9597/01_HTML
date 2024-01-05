@@ -1,35 +1,31 @@
- /* ul 가로 정렬 */
-ul{
-    display:flex ;
-    list-style: none ;
-    padding: 0;
-}
-
-.checkbox{
-    border: 3px solid black;
-    width: 300px;
-    height: 30px;
-    background-color: #ddd;
-    margin: 30px;
-    cursor: pointer;
-}
-
-
-.box2{
-    border: 3px solid black;
+.showbox{
     width: 300px;
     height: 300px;
-    background-color: #ece935;
-    margin: 30px;
-    cursor: pointer;
+    border: 3px solid black;
+    margin: auto;
+    display: flex;
 }
 
-#box1:hover + .box2{
-    background-image: url(../H연습/images/psyduck.01.png);
-    background-size: contain;
+.hoverbox{
+    height: 20px;
+    width: 100px;
+    border: 3px solid black;
 }
 
-#box2:hover + .box2{
+.inline{
+    display: inline-block;
+    margin: 20px 5%;}
+
+.block{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    color: black;
+    padding: 10px;
+}
+
+#h1:hover + #s1{
     background-image: url(../H연습/images/psyduck.01.png);
-    background-size: contain;
+    background-size: cover;
+
 }
