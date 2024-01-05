@@ -1,3 +1,4 @@
+ /* ul 가로 정렬 */
 ul{
     display:flex ;
     list-style: none ;
@@ -43,7 +44,7 @@ background-size: cover;
     background-image: url(../H연습/images/psyduck.02.png);
     background-size: cover;
 }
-#showBox3:hover ~ ul #hoverBox3{
+#hoverBox3:hover {
     background-image: url(../H연습/images/psyduck.03.png);
     background-size: cover;
 }
