@@ -1,0 +1,44 @@
+/* 배경색 설정 css */
+.bg-black{background-color: black;}
+.bg-gray{background-color: gray;}
+.bg-white{background-color: white;}
+.bg-psyduck{background-color: rgb(230,164,82);}
+.bg-green{background-color: rgb(0, 74, 52);}
+
+
+
+.ground{
+    width: 90%;
+    height: 1000px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.ground>#bgu{
+    width: 95%;
+    height: 70%;
+    margin: 0 auto;
+    border-bottom: 10px;
+}
+
+.ground>#bgd{
+    width: 95%;
+    height: 25%;
+    margin: 0 auto;
+}
+
+#bgu>div{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+#bgd>div{
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    border: 1px solid black;
+}

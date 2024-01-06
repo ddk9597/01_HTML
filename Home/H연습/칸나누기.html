@@ -119,5 +119,29 @@
 
 
     </style>
+
+
+    <div class="container">
+        <div class="box">11111111</div>
+        <div class="box">22222222</div>
+        <div class="box">33333333</div>
+    </div>
+
+    <style>
+        .container {
+    display: flex; /* 플렉스 컨테이너로 설정 */
+    }
+
+    .box {
+        flex: 1; /* 모든 박스가 동일한 너비를 갖도록 설정 */
+        height: 100px; /* 높이를 원하는 값으로 설정 */
+        margin: 3px; /* 각 박스 사이의 간격을 설정 */
+        background-color: #a84040; /* 배경색 지정 */
+        display: flex; /* 내부 요소를 플렉스 컨테이너로 설정 */
+        justify-content: center; /* 텍스트를 수평으로 가운데 정렬 */
+        align-items: center; /* 텍스트를 수직으로 가운데 정렬 */
+        color: white; /* 텍스트 색상을 흰색으로 설정 */
+    }
+    </style>
 </body>
 </html>
