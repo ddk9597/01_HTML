@@ -1,0 +1,154 @@
+/* css 파일은 html 스타일 태그 내부에 작성한다 생각하고 쓰면 됩니다. */
+
+/* h1 태그 글자색 red */
+h1{color: red;}
+
+code{
+    background-color: teal ; /* 배경 색 */
+    font-weight: bold ; /* 글자 두껍게 */
+    display: block; /* block 형식으로 변경 */
+    }
+
+    /* ------- 기본 속성 선택자 --------- */
+
+    /* div 태그 > 속성명 name > 속성값 "name-1"인 요소에 배경색 green */
+    /* 선택자[속성명="속성값"] { CSS 코드; } */
+
+    div[name="name-1"] { background-color: green;}
+    
+    /* div 태그 > 속성명 name > 속성값 "name-2"인 요소만 배경색 yellow */
+    div[name="name-2"] {background-color: greenyellow;}
+
+    /* 모든 div 요소의 글자 색을 흰색으로 */
+    div{color: gray;}
+
+    /* p태그 > 속성명 data > 속성값 "data-1"인 요소 배경색 red */
+    p[data="data-1"] { background-color: red;}
+
+    /* 내용이 p3, p4인 요소를 선택해 배경색 blue */
+    p[data="data-2"] { background-color: blue;}
+
+    /* div1, div2. p2, p3의 font-size : 50px */
+    /* 모든 요소(*) 중 속성명 name > 속성값 "name-1"인 요소 글자 크기 */
+    /* * [name="name-1"] {font-size: 50px ;} */
+
+    /* 모든 요소 선택자 생략 가능 */
+    /* name 속성값이 "name-1"인 요소 모두 선택 */
+    [name="name-1"] {font-size: 50px ;}
+    
+
+    /* ---------자식 선택자 (>) ---------- */
+
+    #parent1 {background-color: skyblue;}
+
+    #parent1 > li{ background-color: goldenrod;}
+
+    /* 선택자를 연이어 작성할 수 있다!! */
+    #parent1 > li > span { color: red;}
+
+    /* --------- 후손 선택자 ---------- */
+
+    /* 아이디가 parent2 인 요소의 후손 중 모든 p태그 선택 */
+    #parent2 p { background-color: salmon;}
+    #parent2 div p { color: blue;}
+
+    /* 반응선택자 */
+    .test-div {
+        border: 3px solid black ;
+
+        width: 200px; height: 200px;
+        
+        /* 배경색 : #ddd(16진수) */
+        background-color: #ddd; 
+
+        /* 아래쪽 요소와 30px 만큼 간격 추가 */
+        margin-bottom: 30px ;
+
+        /* 마우스 커서를 손가락 모양으로 */
+        cursor: pointer;
+
+    }
+
+    #activeBox:active{
+        background-color: yellow;
+    }
+
+    /* hoverBox에 마우스가 올라왔을 때 */
+    #hoverBox:hover{
+        background-image: url(../images/cats/cat5.jpg); /* 배경 이미지 설정 */
+        background-size: cover; /* 배경 이미지 크기 설정 */
+    }
+    #hoverBox1:hover{
+        background-image: url(../images/cats/cat5.jpg); /* 배경 이미지 설정 */
+        background-size: cover; /* 배경 이미지 크기 설정 */
+    }
+
+
+    /* --------- 상태 선택자 ------------ */
+    /* :focus */
+    #input1:focus {
+        /* 요소의 기본 테두리 */
+        border-color: red;
+
+        /* 초점이 맞춰졌을 때 요소 바깥에 생기는 선 */
+        outline-color: greenyellow;
+    }
+
+    #input1 {
+        border-color: red;
+    }
+
+    #input2:checked {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        /* radio, checkbox 선택 시 보이는 표시는 배경이 아닌 이미지이므로 배경색 적용되지 않는다 */
+    
+    }
+
+    /* :enabled, / :disabled */
+    .input3:enabled{background-color: skyblue;}
+    .input3:disabled{background-color: lightcoral;}
+
+
+    /* ----------- 동위 선택자 ----------- */
+
+    /* + 바로 뒤 형제 요소 하나 */
+
+    #div1 + div{
+        background-color: green;
+    }
+
+    /* ~ 뒤에 존재하는 형제요소 중 일치하는 요소 모두 선택 */
+
+    #div3 ~ div {
+        background-color: springgreen;
+    }
+
+    /* ----------- 체크박스 만들기 ----------- */
+
+    /* 1. label 요소를 체크박스 모양으로 만들기 */
+    #check + label{
+        width: 30px; height: 30px;
+        border: 1px solid black;
+
+        display : inline-block; /* 크기지정이 가능, 한 줄에 배치(수평분. inline) */
+
+        cursor: pointer; /* 마우스 포인터 모양을 손가락으로 바꾸는 것 */
+
+        border-radius: 20%; /* 모서리 곡률 50%:원 */
+
+        user-select: none; /* 사용자가 선택을 못하게 함 */
+    }
+
+    /* 2. checkbox 체크되었을 때 label에 체크박스 이미지 표시 */
+    #check:checked  + label{
+        background-image: url('../images/checkbox.png');
+        background-size: cover; /* 배경 이미지 크기를 요소에 맞춤 설정 */
+    }
+
+    /* 3. 체크박스를 존재는 하지만 보이지 않게 처리 */
+    #check{
+        display: none; /* 표시하지 않겠다 */
+    }
+    

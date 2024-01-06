@@ -1,0 +1,144 @@
+/* 클래스 기반 CSS(스타일) */
+
+.area1{background-color: red;}
+.area2{background-color: orange;}
+.area3{background-color: yellow;}
+.area4{background-color: green;}
+.area5{background-color: blue;}
+
+.block{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    color: white;
+    display: block;
+}
+
+.inline{display: inline;}
+
+.inline-block{display: inline-block;}
+
+.none{display: none;}
+
+/* visibility 속성 : 요소를 보이게/투명하게 만드는 속성 
+   -> 투명하게 만들어도 요소 크기만큼의 공간은 계속 차지하고 있다
+*/
+.안보이지{visibility: hidden}
+
+/* --------------------------------------------- */
+
+/* 상하 2분할 */
+
+/* 감싸는 요소 */
+.container{
+    border: 3px solid black;
+    width:  471px;
+    height: 471px;
+}
+
+/* 내부 영역 분할 요소(자식) */
+#test1>div{
+    width: 100%;
+    height: 50%;
+}
+
+#test1 > div:first-child{
+    background-color: lightpink;
+}
+#test1 > div:last-child{
+    background-color: darkslategray;
+}
+
+#test2>div:first-child{
+    width: 100%;
+    height: 20%;
+    background-color: red;
+}
+#test2>div:nth-child(2){
+    width: 100%;
+    height: 30%;
+    background-color: yellow;
+}
+#test2>div:last-child{
+    width: 100%;
+    height: 50%;
+    background-color: green;
+}
+
+#test2>li:first-child{
+    width: 100%;
+    height: 20%;
+    background-color: red;
+}
+#test2>li:nth-child(2){
+    width: 100%;
+    height: 30%;
+    background-color: yellow;
+}
+#test2>li:last-child{
+    width: 100%;
+    height: 50%;
+    background-color: green;
+}
+
+/* 상하 3분할 방법2 */
+/* 재사용, 유지보수성 높은 방법 */
+.bg-red{background-color: red;}
+.bg-yellow{background-color: yellow;}
+.bg-green{background-color: green;}
+.bg-grey{background-color: grey;}
+
+.h-20{height: 20%;}
+.h-30{height: 30%;}
+.h-50{height: 50%;}
+
+.w-50{width: 50%;}
+.ib{display: inline-block;}
+
+/* 좌우2분할 */
+#test4>div{
+    width: 50%;
+    height: 100%;
+    display:inline-block;
+}
+
+#test4>div:first-child{
+    background-color: red;
+}
+#test4>div:last-child{
+    background-color: blue;
+}
+
+/* 田 만들기 */
+
+.row{
+    width: 100%;
+    height: 50%;
+}
+
+.col{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+
+
+/* 방법2  */
+
+#test5{
+    line-height: 0;
+}
+#test5 > div{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+}
+
+#test5 > div:nth-child(1){background-color: red;}
+#test5 > div:nth-child(2){background-color: blue;}
+#test5 > div:nth-child(3){background-color: green;}
+#test5 > div:nth-child(4){background-color: white;}
+
+
+

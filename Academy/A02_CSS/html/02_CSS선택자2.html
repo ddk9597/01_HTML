@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_CSS선택자2</title>
+
+    <!-- link 태그 : 외부 css 파일과 연결하는 태그 -->
+    <!-- rel(relationship) : 연결하려는 파일이 현재 html과 어떤 관계인가 -->
+    <!-- href : 참조하려는 파일의 위치(주소, 경로) -->
+    <!-- .. : 상위 폴더로 이동 -->
+    <link rel="stylesheet" href="../css/02_CSS선택자2.css">
+
+    <!-- 
+        *외부에 .css 파일을 만들어 연결해보자*
+        1) HTML 코드가 너무 길어지니까
+        2) 작성한 css 코드를 다른 html 파일과 공유할 수 있다
+    
+    -->
+</head>
+<body>
+    <h1>기본 속성 선택자</h1>
+
+    <pre>
+        태그에 작성 된 특정 속성을 이용해 선택하는 선택자
+
+        <strong>작성법</strong>
+        <code>
+            선택자[속성명="속성값"] { CSS 코드; }
+        </code>
+    </pre>
+
+    <h4>name 속성 선택하기(name은 html에 기본적으로 존재하는 속성)</h4>
+
+    <!-- div*4[name=name-]{div$} -->
+    <div name="name-1">div1</div> <br>
+    <div name="name-1">div2</div> <br>
+    <div name="name-2">div3</div> <br>
+    <div name="name-2">div4</div> <br>
+  
+    <h4>data 속성 선택하기(data는 html의 기본속성이 아님)</h4>
+
+    <!-- p*4[data=data-]{p$} -->
+    <p data="data-1">p1</p>
+    <p data="data-1" name="name-1">p2</p>
+    <p data="data-2" name="name-1">p3</p>
+    <p data="data-2">p4</p>
+
+
+    <hr>
+
+    <h1>자식 선택자( > )</h1>
+
+    <pre>
+        지정된 요소 바로 한 단계(1 level,/depth) 하위 요소 선택
+
+        <strong>작성법</strong>
+        <code>
+            선택자1 > 선택자2 {css 코드}
+
+            - 선택자1 : 부모 요소( 감싸고 잇는 요소 )
+            - 선택자2 : 자식 요소( 하위 요소)
+        </code>
+    </pre>
+
+    <ul id="parent1">
+        <li>자식1</li>
+        <li><span>자식2</span></li>
+        <li>자식3</li>
+        <li><span>자식4</span></li>
+    </ul>
+
+
+    <hr>
+
+    <h1>후손 선택자 (작성법:띄어쓰기)</h1>
+
+    <pre>
+        지정된 요소의 모든 하위 요소 선택 (n level 이하 모두)
+
+        <strong>작성법</strong> 
+        <code>
+            선택자1 선택자2 { CSS 코드; }
+
+            선택자1: 부모(조상) 요소
+            선택자2: 후손 요소
+        </code>
+    </pre>
+
+    <div id="parent2">
+        <p>parent2의 자식 요소 입니다</p>
+        <p>parent2의 후손 요소 입니다</p>
+    
+        <div>
+          <p>parent2의 후손 요소 입니다</p>
+        </div>
+      </div>
+
+    <h1>반응  선택자</h1>
+
+    <pre>
+        사용자의 움직임에 반응하여 스타일이 변경되게하는 선택자
+
+        선택자 : active -> 선택된 요소가 클릭되고 있을 때
+
+        선택자 : hover -> 선택된 요소위에 마우스가 올라갔을 때
+    </pre>
+
+    <div class="test-div" id="activeBox">:active</div>
+
+    <div class="test-div" id="hoverBox">:hover</div>
+    
+    <div class="test-div" id="hoverBox1">:hover</div>
+
+    <hr>
+
+    <h1>상태 선택자</h1>
+    <pre>
+        입력양식(input, input 관련 태그)의 상태에 따라 선택되는 선택자
+
+        :focus -> 요소에 초점이 맞춰졌을 때 
+                  (초점이 맞춰진 때 : input 요소를 클릭하여 입력할 준비가 되었을 때)
+
+        :checked -> 요소가 체크 되었을 때(radio, checkbox)
+
+        :enabled, :disabled -> 요소가 활성/비활성화 되었을 때
+    </pre>
+
+
+    <h5>:focus</h5>
+    아이디 입력 : <input type="text" id="input1"> 
+
+
+    <h5>:checked</h5>
+    <input type="checkbox" id="input2">
+      
+    <h5>:enabled, / :disabled</h5>
+    <input type="text" class="input3" enabled> <br>
+    <input type="text" class="input3" disabled>
+
+    <hr>
+
+    <h1>동위 선택자</h1>
+    <pre>
+        동위(같은 위치 == 형제관계) 관계에서
+        다음(뒤)에 위치한 요소를 선택하는 선택자 (앞쪽은 선택 못한다)
+        
+        예시
+        <ul>부모(ul>li*3)
+            <li>형제</li>
+            <li>형제</li>
+            <li>형제</li>
+        </ul>
+
+        A 
+        B 
+        B 
+
+        1) A 바로 다음에 위치한 B 요소 하나 선택 : ( + )
+        
+        <code>
+            A선택자 + B선택자 {CSS 코드}
+        </code>
+
+        2) A 바로 다음에 위치한 B 요소 모두 선택 : ( ~ )
+
+        <code>
+            A선택자 ~ B선택자 {CSS 코드}
+        </code>
+    </pre>
+
+    <!-- css선택자2 114번째 line -->
+    <div>
+        <div id="div1">1번 입니다</div>
+        <div>2번 입니다</div>
+        <div id="div3">3번 입니다</div>
+        <div id="div4">4번 입니다</div>
+      
+        <p>관련 없는 태그입니다</p>
+      
+        <div id="div5">5번 입니다</div>
+      </div>
+
+
+    <h1>체크박스 만들기</h1>
+
+    <pre>
+        [준비물]
+        - 동위선택자(+)
+        - 상태선택자( :checked)
+        - input type="checkbox"
+        - label 태그 for 속성
+        - 체크박스 이미지 
+    </pre>
+    
+    <input type="checkbox" id="check">
+    <label for="check"></label>
+
+</body>
+</html>
