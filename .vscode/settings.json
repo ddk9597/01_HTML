@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "D2Coding"
+    "editor.fontFamily": "D2Coding",
+    "html-to-css-autocompletion.autocompletionFilesScope": "multi-root"
 }
