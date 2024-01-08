@@ -1,0 +1,31 @@
+.showbox{
+    width: 300px;
+    height: 300px;
+    border: 3px solid black;
+    margin: auto;
+    display: flex;
+}
+
+.hoverbox{
+    height: 20px;
+    width: 100px;
+    border: 3px solid black;
+}
+
+.inline{
+    display: inline-block;
+    margin: 20px 5%;}
+
+.block{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    color: black;
+    padding: 10px;
+}
+
+#h1:hover + #s1{
+    background-image: url(../H연습/images/psyduck.01.png);
+    background-size: cover;
+
+}

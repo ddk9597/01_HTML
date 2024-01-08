@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃스타일</title>
+</head>
+<body>
+    <h1>html의 4가지 요소</h1>
+    content : 내용 
+    - 시작 태그와 종료 태그 사이에 작성되는 내용
+    padding 
+    - contetn, border 사이의 공간
+    border
+    - 테두리. 요소의 테두리가 지정되는 영역
+    margin
+     -다른 요소의 간격을 나타내는 영역
+
+
+
+    <h1>margin : auto</h1>
+
+    다른 요소와의 간격을 자동으로 지정하여
+    가운데 정렬하게 만드는 속성
+
+    기본적으로 좌 우 간격만 자동으로 지정
+    지정되는 대상은 block 형식의 요소여야 한다
+    inline, inline-block
+    text의 경우 text-align:center이용
+<br><br>
+    <div class="outbox">
+        <div class="inbox"></div>
+    </div>
+
+    <style>
+        .outbox{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        .inbox{
+            width: 50%;
+            height: 50%;
+            border: 1px solid black;
+            margin: auto; /* 여기까지하면 inline에만 적용되는 특성으로 인해 가로로밖에 정렬 안됨 */
+            margin-top: 75px;
+        }
+    </style>
+
+    <h1>float</h1>
+    <pre>
+        float : 요소를 띄워서 좌 우로 정렬하는 속성
+        float 있는 요소와 없는 요소가 서로 겹치는 문제 발생
+
+        clear : float 로 인해 띄워진 상태를 해제하는 속성으로
+                요소 겹침 문제를 해결한다.
+    </pre>
+
+    <hr>
+    <h3>float:left/clear:left</h3>
+
+    <div class="box">
+        <div class="float-left">1</div>
+        <div class="float-left">2</div>
+        <div class="float-left">3</div>
+        <div class="float-left">4</div>
+        <div>HELLO</div>
+        <div class="clear-left">World</div>
+        <div class="float-left">5</div>
+        <div class="float-left">6</div>
+        <div class="float-left">7</div>
+    </div>
+
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: #ddd;
+        }
+
+        div{border: 1px solid black;}
+
+        /* float 지정 시 block의 성질 해제. 한줄 차지 안함 */
+
+        .float-left{
+            width: 50px;height: 50px;
+            float: left; /* 띄워서 왼쪽 정렬 */
+            background-color: pink;
+        }
+
+        .clear-left{
+            clear: left;
+        }
+
+    </style>
+
+
+<h1>요소 배치(위치) 관련 스타일(position)</h1>
+<pre>
+    position은 요소의 위치를 지정하는 속성
+
+    positon : relative ;
+    - 지정된 요소 내부에 
+    다른 요소가 상대적인 위치를 지정할 수 있도록
+    기준이 되게 하는 속성
+
+    position:absolute 
+    - 기본 요소의 배치 순서를 무시하고 
+       지정된 절대 위치에 요소를 배치함
+
+    position : fixed
+    - 화면이 움직이던 어떻든 항상 고정된 위치에 
+    요소를 배치하는 속성
+
+    position : sticky 
+    - 요소가 보여지는(원래 배치된) 화면을 벗어나면 fixed
+
+    z-index : z 축 방향으로 올라와 있는 정도를 지정하는 속성
+     - position : absolute 상태의 요소에 적용된다
+     - 기본값은 0, 수치가 같으면 마지막에 해석된 요소가 제일 위로 옴
+</pre>
+
+<div class="container-1">
+    <div class="first">first</div>
+    <div class="second">second</div>
+    <div class="third">thrid</div>
+</div>
+
+<style>
+    .container-1{
+        width: 304px;
+        height: 304px;
+        border: 2px solid black;
+        margin: auto;
+        position: relative; /* 포지션의 기준 relative */
+    }
+</style>
+
+
+
+
+
+
+</body>
+</html>

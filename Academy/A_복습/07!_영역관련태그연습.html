@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07!_영역관련태그연습</title>
+
+    <style>
+        div, span{
+          border : 1px solid black;
+          /* div, span 태그에 검정색 1px 실선 테두리를 추가*/
+        }
+    
+        /* class 속성값이 red인 요소의 배경색을 red로 지정 */
+        .red{ background-color: red;}
+    
+        /* class 속성값이 yellow인 요소의 배경색을 yellow로 지정 */
+        .yellow{ background-color: yellow; }
+    
+        /* class 속성 값이 green인 요소의 배경색을 green으로 지정 */
+        .green{ background-color: green; }
+    
+        /* class 속성 값이 test인 요소에 너비, 높이를 200px로 지정 */
+        .test{
+          width: 200px; /* w200px */
+          height: 200px; /* h200px */
+        }
+      </style>
+</head>
+
+<body>
+    <h3>style 태그 내용 적용 확인</h3>
+    <div class="test green" ></div>
+
+    <hr>
+
+    <h1>block 형식</h1>
+    <pre>
+        - 화면(공간)을 수직 분할 : 세로 화면을 가로로 잘라서 층을 나눔
+
+        - 한층을 모두 차지함
+
+        - width, height와 같은 크기 지정 속성 사용 가능
+
+        - block 형식의 태그
+        h1~h6(제목)     p,pre(문단)
+        hr(수평선)      div(영역 분할)
+        시맨틱 태그(div 태그에 이름 넣은 태그)
+    </pre>
+
+    <h3>h3는 block 형식 태그입니다</h3>
+    <pre>
+        block 형식은 작성된 내용이 짧더라도
+        한 줄을 모두 차지하려는 성질 때문에
+        다음 태그 내용은 다음 줄에 작성됩니다
+    </pre>
+    <div class="red">첫 번째 div</div>
+    <div class="green">두 번째 div</div>
+    <div class="yellow">세 번째 div</div>
+    <hr><hr><hr>
+
+    <h1>inline 형식</h1>
+    <pre>
+        - 화면을 수평 분할 : 가로 화면을 세로로 잘라서 방을 나눈다
+
+        - 한 층을 모두 차지하지 않음 : 내부에 작성된 내용 크기만큼 공간 차지하려는
+        
+        - 별도로 크기 지정 속성 사용 불가
+
+        - inline 형식의 태그
+        b(굵게)                 i(기울이기)
+        strong(접근성 강조)     em(접근성 기울이기)
+        mark(형광펜)            span(영역분할)  등
+    </pre>
+
+    <b>inline 형식은</b><em>행을 분할하는 성질을 가지고 있어</em>   <mark> 줄이 바뀌지 않고 계속 옆으로 작성된다</mark>
+    <br>
+    <span class="red">첫 번째 span</span>
+    <span class="green">두 번째 span</span>
+    <span class="yellow">세 번째 span</span>
+    <hr>
+
+    <h2> 영역 지정 방식의 차이점</h2>
+    <ul>
+        <li>block 형식 : 직사각형 박스 형태로 영역을 지정</li>
+        <li>inline 형식 : 내부에 작성된 내용 단위로 영역 지정</li>
+    </ul>
+    <h3>div(block) 태그 확인</h3>
+    <div class="yellow">동해물과 백두산이 마르고 닳도록<br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+    </div>
+    <h3>span(inline) 태그 확인</h3>
+    <span class="yellow">동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br></span>
+
+        <hr>
+    <h1>크기 지정 여부 차이점</h1>
+    <ul>
+        <li>block: 크기 지정 O</li>
+        <li>inline: 크기 지정 X</li>
+    </ul>
+    <div class="test red"> block test</div>
+    <span class="green">span test</span> <br>
+    <span class="green">span test span test</span> <br>
+    <span class="green">span test span test span test</span> <br>
+
+    <hr>
+
+    <h1>inline-block 형식</h1>
+    <pre>
+        - inline 의 특징 중 수평 분할(세로로 자르는 열 나눔)
+        - block의 특징 중 크기 지정 기능이 있는 방식
+        -대표적인 태그 : img, *iframe 태그
+    </pre>
+
+    <iframe src="06!_이미지태그연습.html" frameborder="0" width="500px" height="500px"></iframe>
+    <iframe src="https://velog.io/@syoung125/%EC%8B%9C%EB%A7%A8%ED%8B%B1-%ED%83%9C%EA%B7%B8-Semantic-Tag-%EC%9E%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0#:~:text=%EC%8B%9C%EB%A7%A8%ED%8B%B1%20%ED%83%9C%EA%B7%B8%20%28Semantic%20Tag%29%EB%9E%80%3F%20Semantic%EC%9D%80%20%27%EC%9D%98%EB%AF%B8%EC%9D%98%27%2C%20%27%EC%9D%98%EB%AF%B8%EB%A1%A0%EC%A0%81%EC%9D%B8%27%EC%9D%B4%EB%9D%BC%EB%8A%94%20%EB%9C%BB%EC%9D%84,%EB%93%B1%20%EC%9D%98%EB%AF%B8%EA%B0%80%20%EC%9E%88%EB%8A%94%20%ED%83%9C%EA%B7%B8%EB%8A%94%20%EB%82%B4%EC%9A%A9%EC%9D%84%20%EB%AA%85%ED%99%95%ED%95%98%EA%B2%8C%20%EC%A0%95%EC%9D%98%20%ED%95%9C%EB%8B%A4." frameborder="0" width="500px" height="500px"></iframe>
+
+
+</body>
+</html>

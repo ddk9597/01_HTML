@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_영역관련태그</title>
+    
+    <style>
+        div, span{
+          border : 1px solid black;
+          /* div, span 태그에 검정색 1px 실선 테두리를 추가*/
+        }
+    
+        /* class 속성값이 red인 요소의 배경색을 red로 지정 */
+        .red{ background-color: red;}
+    
+        /* class 속성값이 yellow인 요소의 배경색을 yellow로 지정 */
+        .yellow{ background-color: yellow; }
+    
+        /* class 속성 값이 green인 요소의 배경색을 green으로 지정 */
+        .green{ background-color: green; }
+    
+        /* class 속성 값이 test인 요소에 너비, 높이를 200px로 지정 */
+        .test{
+          width: 200px; /* w200px */
+          height: 200px; /* h200px */
+        }
+      </style>
+</head>
+<body>
+    
+    <h3>style 태그 내용 적용 확인</h3>
+    <div class="test green" ></div>
+
+    <hr>
+
+    <h1>block 형식</h1> <!-- 쌓아 올리는 레고를 생각해 보자. 건물들 층이 나눠지는 것 생각 -->
+    <pre>
+        - 화면(공간)을 수직 분할 : 
+            (세로 화면을 가로로 잘라서 층(행)을 나눔)
+
+        - 한 층(한 행)을 모두 차지함
+
+        -width, height와 같은 크기 지정 속성 사용 가능
+
+        - block 형식의 태그
+        h1~h6(제목),    p,pre(문단), 
+        hr(수평선),     div(영역 분할)
+        시맨틱 태그(div 태그에 이름 넣은 태그)
+    </pre>
+    <h3>h3 는 block 형식 태그입니다.</h3>
+    <pre>
+        block 형식은 작성된 내용이 짧더라도
+        한 줄을 모두 차지하려는 성질 때문에 
+        다음 태그 내용은 다음 줄에 작성됩니다
+    </pre>
+
+    <div class="red"> 첫 번째 div</div>
+    <div class="yellow">두 번째 div</div>
+    <div class="green">세 번째 div</div>
+
+    <hr><hr><hr>
+
+    <h1>inline 형식 </h1>
+    <pre>
+        - 화면을 수평 분할 : 가로 화면을 세로로 잘라서 방(열)을 나눈다
+
+        - 한 층(행)을 모두 차지하지 않음
+         -> 내부에 작성된 내용 크기 만큼만 차지
+
+        - 별도로 크기 지정 속성 사용 불가(width, height 등)
+
+        - inline 형식의 태그
+        b(굵게)                i(기울이기)
+        strong(접근성 굵게)    em(접근성 기울이기)
+        mark(글 배경 칠하기)   span(영역 분할) 등
+    </pre>
+    <p>
+        <b>inline 형식은</b>
+        <i>행을 분할하는 성질을 가지고 있어</i>
+        <mark>줄이 바뀌지 않고 계속 옆으로 작성된다</mark>
+
+        <br> <!-- 줄 바꿈 태그 -->
+        <span class="red">첫 번째 span</span>
+        <span class="yellow">두 번째 span</span>
+        <span class="green">세 번째 span</span>
+    </p>
+    <hr>d
+    <h2>영역 지정 방식의 차이점</h2>
+    <ul>
+        <li>block 형식 : 직사각형 박스 형태로 영역을 지정</li>
+        <li>inline 형식 : 내부에 작성된 내용(content)단위로 영역을 지정한다</li>
+    </ul>
+    <h3>div 태그(block)확인</h3>
+    <div class="yellow">
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+    </div>
+
+    <hr>
+    <h3>span 태그(inline) 확인</h3>
+    <span class="yellow">
+        동해물과 백두산이 마르고 닳도록 <br>
+        하느님이 보우하사 우리나라 만세. <br>
+        무궁화 삼천리 화려강산 <br>
+        대한 사람, 대한으로 길이 보전하세. <br>
+    </span>
+    <hr>
+
+    <h2>크기 지정 가능 여부 차이점</h2>
+    <ul>
+        <li>block : 크기 지정 O</li>
+        <li>inline : 크기 지정 X</li>
+    </ul>
+    
+    <div class="test red">block test</div>
+    <span class="test green">span test</span> <br>
+    <span class="test green">span test span test </span> <br>
+    <span class="test green">span test span test span test</span> 
+
+    <hr>
+    <h1>inline-block 형식</h1>
+    <pre>
+        - inline의 특징 중 수평 분할(줄을 세로로 자름, 열 나눔)
+        - block의 특징 중 크기 지정 가능
+
+        -대표적인 태그 : img태그
+
+        * iframe 태그 
+          -웹 문서(html)내부에 또다른 웹 문서를 추가하는 태그
+    </pre>
+    <iframe src="06_이미지관련태그.html" frameborder="0" width="500px" height="400px"></iframe>
+    <iframe src="https://kh-academy.co.kr" frameborder="0" width="500px" height="400px"></iframe>
+    <hr>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/E6xjb7AeOyI?list=PL3NgX4uqPt40T1iNoiN9z8CErtWHm06El" title="2019년 벚꽃 최종 저작권 없는 무료 영상 소스  free video (cherry blossoms)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- 유투브 소스는 바로 붙여넣기 하면 됨 -->
+</body>
+
+</html>

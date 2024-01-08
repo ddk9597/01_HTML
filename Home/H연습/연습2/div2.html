@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div2</title>
+</head>
+<body>
+    <style>
+        
+        h1{text-align: center;}
+        h1{font-family:intelone-mono-font-family-regular ;} 
+        @font-face {
+        font-family: 'intelone-mono-font-family-regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;}
+        
+        @font-face {
+        font-family: 'GapyeongWave';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/GapyeongWave.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+}
+
+        .bgc-1 { background-color: rgba(63, 33, 40, 1); }
+        .bgc-2 { background-color: rgba(114, 49, 80, 1); }
+        .bgc-3 { background-color: rgba(191, 96, 75, 1); }
+        .bgc-4 { background-color: rgba(249, 212, 193, 1); }
+        .bgc-5 { background-color: rgba(249, 251, 251, 1); }
+        .bgc-6 { background-color: #436073; }
+        .bgc-7 { background-color: #142126; }
+        .bgc-8 { background-color: #65818C; }
+        .bgc-9 { background-color: #BFA863; }
+        .bgc-10 { background-color: #D9D8D7; }
+        .bgc-11 { background-color: #012623; }
+        .bgc-12 { background-color: #017434; }
+        .bgc-13 { background-color: #029E40; }
+        .bgc-14 { background-color: #02DC4A; }
+        .bgc-15 { background-color: #0D0D0D; }
+
+
+
+
+
+    </style>
+
+    <h1>box set</h1>
+    <div class="box"></div>
+    <style>
+        .box{
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box div row 2</h1>
+
+    <div class="box" id="box1">
+        <div class="bgc-1"></div>
+        <div class="bgc-2"></div>
+    </div>
+
+    <style>
+        #box1>div{
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box in box</h1>
+
+    <div class="box bgc-2" id="box2">
+        <div class="box bgc-3" id="box2-1"></div>
+    </div>
+
+    <style>
+
+        #box2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box2-1{
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box in box in box</h1>
+
+    <div class="box bgc-3" id="box3">
+        <div class="bgc-1" id="box3-1">
+            <div class="bgc-2" id="box3-1-1"></div>
+        </div>
+    </div>
+
+    <style>
+        #box3,#box3-1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box3-1,#box3-1-1{
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box inbox*3</h1>
+    <div class="box bgc-1" id="box4">
+        <div class="bgc-2" id="box4-1">
+            <div class="bgc-3" id="box4-2">
+                <div class="bgc-4" id="box4-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #box4,#box4-1,#box4-2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #box4-3,#box4-1,#box4-2{
+            width: 80%;
+            height: 80%;
+        }
+        
+
+    </style>
+
+    <br><hr>
+    <h1>box inbox*4</h1>
+    <div class="box bgc-1" id="box5">
+        <div class="bgc-2 1" id="box5-1">
+            <div class="bgc-3" id="box5-2">
+                <div class="bgc-4" id="box5-3">
+                    <div class="bgc-5" id="box5-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #box5,#box5-1,#box5-2,#box5-3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #box5-4,#box5-1,#box5-2,#box5-3{
+            width: 70%;
+            height: 70%;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box div col 2</h1>
+    <div class="box bgc-6" id="box6">
+        <div class="bgc-7"></div><div class="bgc-8"></div>
+    </div>
+
+    <style>
+        #box6>div{
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box div col 3 by width set</h1>
+    <div class="box" id="box7">
+        <div class="bgc-8"></div><div class="bgc-9"></div><div class="bgc-10"></div>
+    </div>
+
+    <style>
+        #box7>div{
+            display: inline-block;
+            width: 33.33%;
+            height: 100%;
+        }
+    </style>
+
+    <br><hr>
+    <h1>box div col 3 by flex</h1>
+    <div class="box" id="box8">
+        <div class="bgc-7"></div>
+        <div class="bgc-8"></div>
+        <div class="bgc-9"></div>
+    </div>
+
+    <style>
+        #box8{
+            display: flex;
+        }
+
+        #box8>div{
+            flex: 1;
+            height: 100%;
+        }
+    </style>
+
+    <br><hr>
+    <h1>row col mix 1</h1>
+    <div class="box" id="box9">
+        <div id="box10" style="background-color: red;">
+            <div class="bgc-1"></div><div class="bgc-2"></div><div class="bgc-3"></div>
+        </div>
+        <div id="box10">
+            <div class="bgc-7"></div><div class="bgc-8"></div>
+        </div>
+    </div>
+
+    <style>
+        #box9>div{
+            width: 100%;
+            height: 50%;
+        }
+
+        #box10{display: flex;}
+        #box10>div{
+            flex: 1;
+        }
+    </style>
+
+    <br><hr>
+    <h1>row col mix 2</h1>
+    <div class="box" id="bg">
+
+        <div class="bgc-1 h20" id="head">
+            <div class="bgc-8" id="logobox">
+                <h1 id="logo">로고</h1>
+            </div>
+        </div>
+
+        <div class="bgc-2 h60" id="body">
+            <div id="inbody">
+                <div class="bgc-11"></div>
+                <div class="bgc-12"></div>
+                <div class="bgc-13"></div>
+            </div>
+        </div>
+
+        <div class="bgc-3 h20" id="foot">
+            <div class="bgc-6"></div>
+            <div class="bgc-7"></div>
+        </div>
+    </div>
+
+    <style>
+        .h20{height: 20%;}
+        .h60{height: 60%;}
+
+        #head{
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+
+        #logobox{
+            width: 80%;
+            height: 70%;
+        }
+
+        #logo{font-family: GapyeongWave;
+        text-align: center;
+        }
+
+        #body,#inbody{
+            display: flex;
+        }
+
+        #inbody>div{
+            flex: 1;
+        }
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button,hovering,page</title>
+</head>
+<body>
+    <style> /* h1 set center */
+        h1{text-align: center;} 
+        p{text-align: center;}
+    </style>
+
+    <h1>form tag</h1>
+    <p> 입력 양식을 작성하는 판</p>
+    <p> 내부에 작성 된 입력 값을 지정된 곳으로 제출하는 역할</p>
+
+    <form action=""> 제출 주소 작성</form>
+    
+    <br><hr>
+    <h1>input</h1>
+    <input type="text"> input type="text" <br>
+    <input type="password"> input type="password" <br>
+
+    <input type="number"> input type number <br>
+    <input type="range"> input type range <br>
+    <pre>
+        input 속성
+        min, max
+        step : 증가, 감소하는 간격
+        value : 초기값 지정
+    </pre>
+
+    <br><hr>
+    <h1>날짜, 시간 관련 input 태그</h1>
+    <input type="date"> input type date <br>
+    <input type="week"> input type week <br>
+    <input type="month"> input type month <br>
+    <input type="time"> input type time <br>
+    <input type="datetime-local"> input time datetime-local <br>
+
+    <br><hr>
+    <h1>radio, check</h1>
+    <pre>
+        여러 연관 값을 묶어서 선택하는 경우에 사용
+        radio : 하나만 선택
+        checkbox : 여러개 선택
+        연관된 radio, checkbox는 같은 name 속성 값을 가져야 한다
+    </pre>
+
+    <h2> radio 확인</h2>
+
+    <input type="radio" name="team"> A <br>
+    <input type="radio" name="team"> B <br>
+    <input type="radio" name="team"> C <br>
+    <input type="radio" name="team"> D <br>
+
+    <h2>checkobx 확인</h2> 
+    체크박스에 name 태그 없는 경우 form-action="" 으로 제출시 따로 보내진다
+    name 속성이 있어야지 묶어서 보내진다 <br> <br>
+
+
+    <input type="checkbox" name="color"> Red <br>
+    <input type="checkbox" name="color"> blue <br>
+    <input type="checkbox" name="color"> black <br>
+    <input type="checkbox" name="color"> white <br>
+
+    <h2>value 속성</h2>
+    <pre>
+        radio, checkbox에서 제출 할 값을 수신하는 곳에서 표기 방식을 작성하는 속성
+    </pre>
+    
+    <br><hr>
+
+    <h1>label 태그</h1>
+    <pre>
+        입력 관련 태그 등의 제목을 나타내는 태그
+        1. label 태그 내부에 입력 관련 태그를 하나 작성하면 
+        label 태그를 클릭해도 입력 관련 태그가 선택된다
+
+        2. 입력 관련 태그의 id 속성 값을 label 태그의 for 속성 값과 동일하게 설정하면
+        원거리에서 연결 가능하다
+
+        <br>
+        <label><h3>클릭!</h3> <input type="checkbox"></label>
+
+        <br>
+        <input type="checkbox" id="click">
+        <br><br><br><br><br><br>
+        <label for="click">여기를 클릭하면 위 체크박스가 선택됩니다</label>
+
+
+        <h1>원거리에서 체크박스 선택</h1>
+
+        <input type="checkbox" id="001">
+
+        <label for="001">원거리에서 선택하기</label>
+
+        <div class="bg">
+            <div></div>
+            <div></div>
+        </div>
+
+        <style>
+            .bg{
+                width: 300px; 
+                height: 300px;
+                border: 1px solid black;
+                align-items: center;
+            }
+        </style>
+
+
+
+    </pre>
+</body>
+</html>

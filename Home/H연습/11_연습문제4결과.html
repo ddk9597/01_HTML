@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>납품 내역</title>
+
+  <style>
+    .container {   margin: 100px auto;   border: 3px solid black;   width: 450px;   padding: 10px;  }
+    h1{text-align: center; margin: 30px 0 !important;}
+    .container * { margin-bottom: 10px; }
+    .container li>strong{ display: inline-block; width: 120px;}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 style="color:steelblue">납품 내역</h1>
+    <hr>
+
+    <ul>
+      <li><strong>납품자명 :</strong> <span id="name"></span></li>
+      <li><strong>email :</strong> <span id="email"></span></li>
+      <li><strong>홈페이지 :</strong> <span id="homepage"></span></li>
+      <li><strong>지역 :</strong> <span id="location"></span></li>
+    </ul>
+
+    <hr>
+
+    <ul>
+      <li><strong>상품명 :</strong> <span id="productName"></span></li>
+      <li><strong>납품수량 :</strong> <span id="amount"></span></li>
+      <li><strong>납품등급 :</strong> <span id="grade"></span></li>
+    </ul>
+
+    <hr>
+    <h4>기타사항</h4> 
+    <pre id="etc"></pre>
+
+  </div>
+
+
+  <script>
+    const params = new URL(location.href).searchParams;
+    const arr = [];
+    document.querySelectorAll("ul span, pre").forEach(item => arr.push(item.id));
+    arr.forEach(id => document.getElementById(id).innerText = params.get(id));
+  </script>
+</body>
+
+</html>

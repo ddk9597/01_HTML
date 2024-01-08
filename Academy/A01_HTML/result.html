@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과 페이지</title>
+</head>
+<body>
+    <h3>입력된 사용자 이름 : <span id="name-result"></span></h3>
+
+    <!-- JS 맛보기 -->
+
+    <script>
+        const params = new URL(location.href).searchParams;
+
+        const nameresult = document.getElementById("name-result")
+
+        nameresult.innerText = params.get("user-name")
+    </script>
+    <!-- 입력을 할 때 마다 다른 결과 화면을 나타낼 수 있다. -->
+
+    <hr>
+    <h3> 입력된 사용자 아이디 : <span id="id-result"></span> </h3>
+    <h3> 입력된 사용자 비밀번호 : <span id="pw-result"></span> </h3>
+  
+    <script>
+       const idResult = document.getElementById("id-result");
+       const pwResult = document.getElementById("pw-result");
+  
+       idResult.innerText = params.get("input-id");
+       pwResult.innerText = params.get("input-pw");
+    </script>
+
+<hr>
+<h3> 입력된 score1 : <span id="score1-result"></span> </h3>
+<h3> 입력된 score2 : <span id="score2-result"></span> </h3>
+
+<script>
+   const score1 = document.getElementById("score1-result");
+   const score2 = document.getElementById("score2-result");
+
+   score1.innerText = params.get("score1");
+   score2.innerText = params.get("score2");
+</script>
+</body>
+</html>
