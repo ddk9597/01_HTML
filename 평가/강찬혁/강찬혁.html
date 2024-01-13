@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI디자인 평가_강찬혁</title>
+    <link rel="stylesheet" href="./강찬혁.css">
+</head>
+<body>
+    <!-- 화면 상단 부분, 테두리 3분할 -->
+    <header> 
+        <section class="head-container"> <!-- 헤드 테두리 -->
+
+            <div class="headleft"> <!-- 헤드 좌측 -->
+                <a href="http://www.choungsan.co.kr/">
+                    <img src="./images/headleftlogo.PNG" alt="홈 화면 로고 넣기">
+                </a>
+            </div>
+
+            <div class="headcenter"> <!-- 헤드 중앙 -->
+                <a href="#" class="logo">
+                    <img src="./images/Logo.png" alt="메인 로고 넣기">
+                </a>
+            </div>
+
+            <div class="headright"> <!-- 헤드 우측 -->
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+            </div>
+        </section>
+    </header>
+
+
+    <!-- 상단 네비게이션 바 -->
+    <!-- ul로 묶은 후 각 항목 li로 개설 링크 설정 -->
+    <nav >
+        <ul class="navbar">
+            <li>
+                <a href="#">대표메뉴</a>
+                <div id="hidden">
+                    <ul>
+                        <li><a href="#burger">버거</a></li>
+                        <li><a href="#fries">감자튀김</a></li>
+                        <li><a href="#peikingduck">훈제오리</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#consult">가맹문의</a>
+                <div id="hidden">
+                    <ul>
+                        <li><a href="#consult">상담 문의</a></li>
+                        <li><a href="#">개설 안내</a></li>
+                        <li><a href="#">F A Q</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="#sns">커뮤니티</a>
+                <div id="hidden">
+                    <ul>
+                        <li><a href="https://www.instagram.com/">인스타그램</a></li>
+                        <li><a href="https://www.facebook.com/?locale=ko_KR">페이스북</a></li>
+                        <li><a href="https://www.kurly.com/main">마켓컬리</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="#cs">고객센터</a>
+                <div id="hidden">
+                    <ul>
+                        <li><a href="#">HCCP 인증</a></li>
+                        <li><a href="#">친환경 인증</a></li>
+                        <li><a href="#">쿠폰</a></li>
+                    </ul>
+                </div></li>
+            <li><a href="#">가맹점 안내</a>
+                <div id="hidden">
+                    <ul>
+                        <li><a href="#area1">잠실점</a></li>
+                        <li><a href="#area2">건대점</a></li>
+                        <li><a href="#area3">성수점</a></li>
+                    </ul>
+                </div></li>
+        </ul>
+
+    </nav>
+
+    <!-- 페이지의 주된 내용들  -->
+    <main>
+        <!-- 배너 -->
+        <section class="banner-container">
+            <a href="#" class="banner">
+                <div></div> 
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </a>
+        </section>
+
+
+        <!-- 메인 내용 -->
+        <section class="content-container">
+
+            <!-- 콘텐츠 -->
+            
+
+            <!-- 콘텐츠 -->
+            <div class="content-row"> 
+                <!-- 콘텐츠 이미지 -->
+                
+                        <div class="img-col" id="burger">
+                            <img src="./images/burger.1.jpg" alt="" class="thumbnail">
+                        </div>
+                        <!-- 콘텐츠 내용 -->
+                        <div class="des-col" >
+                            <h1>오리패티 버거</h1>
+                            <hr>
+                            
+                            <p>
+                                고급 오리고기로 만든 패티는 부드럽고 풍부한 맛을 자랑하며, 특별한 소스와 신선한 야채, 고소한 치즈와 함께 조화를 이룹니다. 이 특별한 오리고기 패티 버거는 고객님의 입맛을 만족시킬 것입니다. 신선한 재료와 독특한 조합으로 만든 우리만의 특별한 맛을 경험해보세요!
+                            </p>
+                        </div>
+
+                </div>
+        
+
+                </div>
+                
+            <!-- 콘텐츠 -->
+            <div class="content-row"> 
+                <!-- 콘텐츠 이미지 -->
+                <div class="img-col" id="fries">
+                    <img src="./images/감자튀김.webp" alt="" class="thumbnail">
+                </div>
+                <!-- 콘텐츠 내용 -->
+                <div class="des-col" >
+                    <h1>감자튀김</h1>
+                    <hr>
+                    
+                    <p>
+                        바삭하고 고소한 맛이 특징입니다. 신선한 감자를 고온에서 튀겨 바삭하게 튀겨낸 이 특별한 감자튀김은 모든 고객들에게 사랑받고 있습니다. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 -->
+            <div class="content-row"> 
+                <!-- 콘텐츠 이미지 -->
+                <div class="img-col">
+                    <img src="./images/훈제오리.jpg" alt="" class="thumbnail" >
+                </div>
+                <!-- 콘텐츠 내용 -->
+                <div class="des-col" id="peikingduck">
+                    <h1>훈제오리</h1>
+                    <hr>
+                    
+                    <p>
+                        고급스러운 맛과 품질로 손님들의 입맛을 사로잡고 있는 메뉴입니다
+                    </p>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 -->
+            <div class="content-row"> 
+                <!-- 콘텐츠 이미지 -->
+                <div class="img-col">
+                    <img src="./images/consultant.png" alt="" class="thumbnail">
+                </div>
+                <!-- 콘텐츠 내용 -->
+                <div class="des-col" id="consult">
+                    <h1>가맹문의</h1>
+                    <hr>
+                    
+                    <p>
+                        우리의 비즈니스 모델, 제품 라인업, 가맹점 운영 방식 등에 대한 정보를
+                         얻을 수 있는 기회입니다. 우리의 가맹 상담은 새로운 사업을 시작하거나
+                          우리 브랜드와 함께 성장하고자 하는 분들을 위해 마련되었습니다.
+                    </p>
+                    <!-- 콘텐츠 링크 버튼 -->
+                    <button><a href="#">상담문의</a></button>
+                    <button><a href="#">개설안내</a></button>
+                    <button><a href="#">FAQ</a></button>
+                </div>
+            </div>
+
+            <!-- 콘텐츠 -->
+            <div class="content-row"> 
+                <!-- 콘텐츠 이미지 -->
+                <div class="img-col">
+                    <img src="./images/news.png" alt="" class="thumbnail">
+                </div>
+                <!-- 콘텐츠 내용 -->
+                <div class="des-col" id="sns">
+                    <h1>커뮤니티</h1>
+                    <hr>
+                    
+                    <p>
+                        팔로우하고 다양한 소식을 빠르게 만나보세요
+                    </p>
+                    <!-- 콘텐츠 링크 버튼 -->
+                    
+                    <button><a href="#">facebook</a></button>
+                    <button><a href="#">instagram</a></button>
+                    <button><a href="#">마켓컬리</a></button>
+                </div>
+            </div>
+
+            <div class="content-row"> 
+                <!-- 콘텐츠 이미지 -->
+                <div class="img-col">
+                    <img src="./images/customerservice.png" alt="" class="thumbnail">
+                </div>
+                <!-- 콘텐츠 내용 -->
+                <div class="des-col" id="cs">
+                    <h1>고객센터</h1>
+                    <hr>
+                    
+                    <p>
+                        우리의 고객센터는 항상 여러분의 서비스와 도움을 위해 최선을 다하고 있습니다. 여러분의 소중한 의견을 듣고, 문의 사항에 신속하고 친절하게 대응하여 최상의 서비스를 제공하기 위해 노력하고 있습니다.
+                    </p>
+                    <!-- 콘텐츠 링크 버튼 -->
+                    <button><a href="#">HCCP 인증</a></button>
+                    <button><a href="#">친환경 인증</a></button>
+                    <button><a href="#">쿠폰</a></button>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- 카드 형태의 요소를 모아둔 행 -->
+            <div class="content-row card-container">
+
+                <!-- 카드 콘텐츠 $ -->
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./images/1.jpg" alt="" class="card-thumbnail">
+                        </div>
+                        <p class="card-content" id="area1">잠실점 1</p>
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./images/2.jpg" alt="" class="card-thumbnail">
+                        </div>
+                        <p class="card-content"> 잠실점2</p>
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./images/3.jpg" alt="" class="card-thumbnail">
+                        </div>
+                        <p class="card-content"> 잠실점3</p>
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./images/4.jpg" alt="" class="card-thumbnail">
+                        </div>
+                        <p class="card-content" id="area2"> 건대점1</p>
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./images/5.jpg" alt="" class="card-thumbnail">
+                        </div>
+                        <p class="card-content"> 건대점2</p>
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./images/6.png" alt="" class="card-thumbnail">
+                        </div>
+                        <p class="card-content" id="area3"> 성수점1</p>
+                    </a>
+                </div>
+
+                <div class="card-item">
+                    <a href="#" class="card">
+                        <div class="card-thumbnail-container">
+                            <img src="./7.png" alt="이미지의 설명을 적는 내용입니다. 성수점의 두번째 모습입니다. 일부러 안넣었어요" class="card-thumbnail">
+                        </div>
+                        <p class="card-content"> 성수점2</p>
+                    </a>
+                </div>
+
+                
+            </div>
+            
+
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>Copyright &copy; KH Information Educational Institute A-Class</p> 
+        <!-- &copy; : 특수문자 ⓒ -->
+
+		<article> <!-- 시맨틱 태그 article -->
+            <a href="#">프로젝트 소개</a>    
+            <span>|</span>
+            <a href="#">이용약관</a>    
+            <span>|</span>
+            <a href="#">개인정보처리방침</a>    
+            <span>|</span>
+            <a href="#">고객센터</a>    
+		</article>
+    </footer>
+
+
+    <aside>
+
+        <a href="#">
+            <img src="./images/cat.jpeg" alt="">
+        </a>
+        <a href="#">
+            <img src="./images/cat.jpeg" alt="">
+        </a>
+        <a href="#">
+            <img src="./images/cat.jpeg" alt="">
+        </a>
+        <a href="#">
+            <img src="./images/cat.jpeg" alt="">
+        </a>
+
+
+        <hr>
+        <div class="top-button">
+            <a href="#body-top">맨 위로 가기</a>
+        </div>
+    </aside>
+</body>
+</html>

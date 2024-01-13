@@ -1,0 +1,422 @@
+:root{
+    --main-color: gray;
+}
+
+
+/* color */
+
+.bgc-1{background-color: #527853 ;}
+.bgc-2{background-color: #F9E8D9 ;}
+.bgc-3{background-color: #F7B787 ;}
+.bgc-4{background-color: #EE7214 ;}
+
+.fc-1{color: #527853 ;}
+.fc-2{color: #F9E8D9 ;}
+.fc-3{color: #F7B787 ;}
+.fc-4{color: #EE7214 ;}
+
+/* font */
+@font-face {
+    font-family: 'EASTARJET-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/EASTARJET-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Giants-Inline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+p{
+    font-family: EASTARJET-Medium;
+    font-size: x-large;}
+
+a{
+    color : black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 5px 0; /* li 요소 간격 조정 */
+}
+
+body{
+    display: flex; 
+    flex-direction: column;
+    background-color: #F7B787;
+
+    /* 화면 크기가 작아져도 유지 해야 할 최소 크기 */
+    min-width: 768px;  /* 최소 화면 너비 */
+    min-height: 100vh; /* 최소 화면 높이 100% : */
+}
+
+/* header css */
+/* header css */
+/* header css */
+
+/* 헤드 전체 설정 */
+header{
+    padding: 15px 0;
+    border-bottom : 2px solid var(--main-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 헤드 통 설정 */
+.head-container{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    height: 150px;
+    width: 100%;
+
+    max-width: 1200px;
+}
+
+/* 통 내의 좌 센터 우측 설정 */
+.head-container > div{
+    height: 90%;
+    display: flex;
+    align-items: center ;
+    align-content: space-between;
+}
+
+.headleft > *{
+    height: 100px;
+}
+
+.headcenter > *{
+    height: 100px;
+}
+
+.headright a{
+    font-weight: bold;
+    color: #527853;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: underline;
+}
+
+.headleft > *,
+.headcenter > * {
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    display: block; 
+    object-fit: contain; 
+}
+
+/* nav */
+/* nav */
+/* nav */
+
+nav{
+    padding: 10px 10px;
+    border-bottom: 2px solid var(--main-color);
+
+    background-color: white;
+    position: sticky;
+    top: -1px;
+    z-index: 10000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #F9E8D9;
+
+}
+.navbar > li{
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.navbar > li > a{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #527853;
+    font-family: Giants-Inline;
+
+    padding: 3px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+#hidden{
+    display: none;
+    position: absolute;
+    background-color: rgba(82, 120, 83, 0.9);
+    width: 100%;
+    margin-top: 250px;
+    padding-top: 40px;
+    text-align: center;
+    transition-duration: 0.25s;
+    border-radius: 20px;
+}
+
+#hidden > ul > li a{
+    color: #F9E8D9 ;
+
+    font-size: 30px;
+    font-family: Giants-Inline;
+    text-decoration: underline;
+}
+
+
+
+a:hover + #hidden,
+#hidden:hover {
+    display: block; /* 대표메뉴에 호버링하거나 hidden div에 호버링 시 나타나게 함 */
+    
+}
+
+.navbar > li:hover #hidden{
+    display: block;
+    transform: scale(1);
+}
+
+#hidden ul li {
+    padding: 10px 0px;
+    margin : -2px;
+}
+
+
+/* main */
+/* main */
+/* main */
+/* main */
+
+main{
+    flex-grow: 1;
+}
+
+/* 베너 */
+/* 베너 */
+/* 베너 */
+.banner-container{
+    height: 5vw;
+    border-bottom: 2px solid var(--main-color);
+    overflow: hidden;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(./banner.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.banner>div{
+    flex: 1;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+/* 메인 내용 */
+/* 메인 내용 */
+/* 메인 내용 */
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 750px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.content-row{
+    background-color: #c46e0c;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+}
+
+.img-col{
+    width: 400px;
+    flex-shrink: 0;
+    padding-top: 35px;
+}
+
+.thumbnail{
+    border: 3px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    
+
+}
+
+.des-col{
+    margin: 0 20px;
+    height: 500px;
+    padding-left: 30px;
+}
+
+.des-col > h1{
+    color: black;
+    font-family: Giants-Inline;
+    font-weight: bold;
+    font-size: 75px;
+}
+
+.des-col > button {
+    padding: 10px 20px; /* 버튼 안의 내용물과 버튼 테두리 사이의 여백 조절 */
+    font-size: 32px; /* 버튼 안의 텍스트 크기 조절 */
+    background-color: #527853; 
+    color: #ffffff; 
+    border: none; /* 테두리 제거 */
+    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    font-family: 'Giants-Inline';
+    height: 100px;
+    min-width: 20%;
+    
+
+}
+
+
+/* 카드 */
+/* 카드 */
+/* 카드 */
+
+.card-container{
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    
+}
+
+/* 카드를 감싸는 요소 */
+.card-item{
+    flex-shrink: 0;
+    width: 25%;
+    min-width: 200px;
+    padding: 15px;
+}
+
+.card{
+    display: block;
+}
+
+.card-thumbnail-container{
+    height: 200px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.card-thumbnail{
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.25s;
+    object-fit: contain;
+}
+
+.card-content{
+    padding-top: 10px;
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+.card:hover .card-thumbnail{
+    transform: scale(1.1);
+}
+
+footer{
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 200px;
+    background-color: #144e02;
+    color: bisque;
+    
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 370px;
+
+    position: fixed;
+
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+
+
+aside>a{
+    flex: 1;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    padding-left: 10px;
+}
+
+aside img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    user-select: none;
+    color: gray;
+    font-weight: bold;
+}
+
+@media screen and (max-width : 1500px){
+    aside{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 1024px){
+    .card-item{
+        width: 33.33%;
+    }
+
+    .des-col{
+
+    }
+}

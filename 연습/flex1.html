@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex1</title>
+    <link rel="stylesheet" href="./felx1.css">
+    <link rel="stylesheet" href="./flex-style.css">
+</head>
+<body>
+    <h1>displat : flex (플렉스 박스)</h1>
+
+    <pre>
+        요소의 정렬되는 방향, 순서, 요소 간의 간격을 하나 하나 수치적으로 처리하지 않아도
+        알아서 유연하게 처리하는 방식
+
+        <b> flex 이용 시 반드시 알아야 할 것</b>
+
+        <i> 1. flex의 구성</i>
+        - flex container : 정렬이 필요한 요소(item)를 감싸는 요소
+        - item : 정렬이 적용될 요소
+
+        (fleax container용 속성, item용 속성이 구분되어 있음)
+
+        <i>2. flex의 축(axis)</i>
+        - 중심축 (main axis)
+        - 교차축, 반대축 (cross axis)
+    </pre>
+
+    
+
+
+    <div class="shell">
+        <div class="row">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="row">
+            <div class="box1"></div>
+        </div>
+    </div>
+
+    <div class="flex-container">
+        <div class="item  item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+        <div class="item item5">item5</div>
+        <div class="item item6">item6</div>
+        <div class="item item7">item7</div>
+        <div class="item item8">item8</div>
+        <div class="item item9">item9</div>
+    </div>
+
+    <b>flex container 전용 속성</b>
+    - 감싸는 요솔르 flex 형식으로 변경
+        -> 내부에 작성되는 item 을 유연하게 배치하겠다는 의미
+    
+    - 해당 속성이 적용되면 유연하게 배치할 수 있도록 내부 item의
+    자동으로 지정된 margin  속성이 사라진다.
+
+
+</body>
+</html>

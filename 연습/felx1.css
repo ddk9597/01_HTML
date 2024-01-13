@@ -1,0 +1,79 @@
+.flex-container{
+    height: 700px;
+    background-color: #ccc;
+
+
+    /* .flex-container를 flex container로 지정 */
+    display: flex;
+
+    /* flex-direction */
+    /* 중심축 방향 (기본값 : row) */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    flex-direction: column-reverse; /* 세로로 역순으로 정렬 */
+
+    /* justify-content */
+    /* 중심축 방향으로 item 정렬(기본값 : flex-start) */
+
+    /* justify-content: flex-start; */ /* 기본값. 중심축 시작 방향으로 정렬 */
+
+    justify-content: flex-end;  /*  */ /* 중심축 끝 방향으로 정렬. */
+
+    /* justify-content: center; */  /* item 의 정렬이 중앙으로 오게 정렬 */
+
+    /* justify-content: space-around; */ 
+
+    /* justify-content: space-between; */
+
+    /* justify-content: space-evenly; */ /* 양 끝단을 포함해 아이템들의 간격 동일하게 */
+
+
+    /* align-items: ; */
+    /* 교차축 방향 item 정렬 기본 값: stretch */
+    /* item에 교차축 방향 크기 지정 속성이 설정되지 않아야 한다
+
+    /* 종류 */
+    /* align-items : stretch; */
+    align-items: baseline;
+    align-items: flex-end;
+    align-items: flex-start;
+    align-items: center;
+
+}
+
+.shell{
+    width: 1000px;
+    height: 750px;
+    border: 1px solid black;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    width: 90%;
+    height: 40%;
+    border: 1px dotted red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row>div{
+    width: 40%;
+    height: 90%;
+    border: 2px dotted green;
+    background-color: blue;
+}
+
+.row > .box1{
+    width: 90%;
+    height: 90%;
+    border: 1px dashed black;
+}
+
+.box1:hover{
+}
