@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js04</title>
+</head>
+<body>
+    <h1>비교 연산자</h1>
+
+    <pre>
+        좌변과 우변을 비교해서 맞을 경우 true, 아닐 경우 false를 반환하는 연산자
+        연산 결과로 놀리 값(boolean)을 반환
+    </pre>
+
+    <h3>입력된 두 수가 같은지 확인</h3>
+
+    <div>
+        <label for="compareValue1"></label>
+        <input type="text" id="compareValue1"> <br>
+        
+        <label for="compareValue1"></label>
+        <input type="text" id="compareValue2"> <br><br>
+        
+        <button onclick="compareFn()">비교</button>
+        <span id="result1"></span>
+
+    </div>
+
+    <!-- 위에 입력한 수가 아래 입력된 수보다 큰지 확인하기 -->
+
+    <h1>왼쪽에 입력된 수가 오른쪽에 입력된 수보다 큰지 확인하기</h1>
+
+    <div>
+        <label for="compareValue3"></label>
+        <input type="number" id="compareValue3">    
+
+        <label for="compareValue4"></label>
+        <input type="number" id="compareValue4"> <br>
+
+        <button onclick="compareFn2()"> 비교</button>
+        <span id="result2"></span>
+
+
+    </div>
+
+
+    <h1>배수가 맞는지 확인하기</h1>
+
+    <div>
+        <label for="input01"></label>
+        <input type="text" id="input01">
+
+        <label for="input02"></label>
+        <input type="text" id="input02">
+
+        <button onclick="modCheckFn()">확인하기</button>
+
+        <div>결과 값 : <span id="modResult"></span></div>
+    </div>
+
+
+    <h1>And, Or, 논리 부정 연산</h1>
+    <pre>
+        And ( && )연산 : 및. 두 명제 모두 참이어야지 true를 반환한다
+                         false를 반환하는 경우 : T,F/ F,F/ F,T/
+
+        Or ( || ) 연산 : 두 명제 중 하나만 참이어도 참인 명제
+                         두 명제 중 둘 모두 거짓이어야지 false를 반환하는 명제
+
+        논리 부정 연산( ! ) : 논리 값을 반대로 바꾸는 연산자
+        ex) let test = true;
+            !test; // !true - > false
+    </pre>
+
+    <h1> 삼항 연산자를 이용한 로그인 시스템 만들기</h1>
+
+    <div>
+        ID : <input type="text" id="inputId">
+        PW : <input type="password" id="inputPw">
+
+        <button onclick="login()">로그인</button>
+    </div>
+
+
+
+
+    
+    <script src="./js04.js"></script>
+</body>
+</html>

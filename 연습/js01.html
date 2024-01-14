@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js01</title>
+</head>
+<body>
+
+    <style>
+        h1{text-align: center;}
+        pre{font-size: 1.3em;}
+    </style>
+
+    <h1>Script언어란</h1>
+    <pre>
+        한 줄 읽고 바로 실행하는 언어
+        기본 프로그램의 동작을 사용자의 요구에 맞게 수행되도록 해주는 용도의 언어
+        별도의 소스코드 컴파일 없이 이터프리터를 이용해서 코드를 바로 실행
+        컴파일 : 2진수 변환
+        인터프리터(interpreter : 한 줄씩 코드를 읽어 해석하는 기능)
+
+        - 장점 : 컴파일에 소요되는 시간 없음
+        - 단점 : 프로그램 실행 시간이 상대적으로 느리다
+        
+    </pre>
+    <hr>
+
+    <h1>Java Script 란</h1>
+
+    <pre>
+        웹 브라우저에서 주로 사용하는 interpreter방식의 객체지향
+        프로그램 언어
+
+        작성 방식 4가지
+        콘솔에 직접 작성
+        인터널 : html 문서에 작성 script 태그 내에
+        익스터널 : 외부 js 파일 불러오기(바디태그 제일 끝에)
+        라인
+
+        익스터널 방식 추천
+    </pre>
+
+    <button type="button" onclick="internalFn()">인터널 방식 확인</button>
+    
+
+    <button type="button" onclick="externalFn()">익스터널 방식 확인</button>
+
+
+    <h1>다크모드 바꾸기</h1>
+
+    <button type="button" onclick="darkMode()"> 다크모드 바꾸기 </button>
+    <button type="button" onclick="lightMode()"> 라이트모드 바꾸기 </button>
+
+
+
+
+
+
+    <script src="./js01.js"></script>
+</body>
+</html>
