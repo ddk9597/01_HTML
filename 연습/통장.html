@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통장</title>
+
+    <link rel="stylesheet" href="./통장.css">
+</head>
+<body>
+    <h1>입금통장</h1>
+
+    <h1>잔액 : <span id="balance"></span></h1>
+
+    <label for="inputAmount">입금액 : </label>
+    <input type="number" id="inputAmount"> <br><br>
+
+    <label for="userName">이용자 성명 : </label>
+    <input type="text" id="userName"> <br><br>
+
+    <button onclick="deposit()">입금하기</button>
+
+    <button onclick="checkPassword()">출금하기</button>
+
+    <h2>입출금 기록</h2>
+    <ul id="record"></ul>
+    
+    <script src="./통장.js"></script>
+</body>
+</html>

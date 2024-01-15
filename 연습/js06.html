@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js06</title>
+</head>
+<body>
+    <h1>조건문</h1>
+    <pre>
+        if , else-if, switch, 난수 발생.
+    </pre>
+
+    <h3>0~100 사이 난수 발생시켜 홀짝 구분하기</h3>
+    
+    <button onclick="randomNumber()">확인하기</button>
+
+    <h3>어린이 청소년 성인 구분하기</h3>
+
+    <pre>
+        - 미입력 : 값을 입력하세요.
+        - 0미만, 150초과 : 잘못된 수 입니다.
+        - 0이상 13이하 : 어린이 입니다
+        - 14이상 19이하 : 청소년입니다
+        - 20이상 : 성인입니다
+        
+    </pre>
+
+    <label for="inputAge">나이를 입력하세요 : </label>
+    <input type="number" id="inputAge">세
+    <button onclick="ageCheck()">확인하기</button>
+    
+    
+    <h3>switch문을 이용한 계산기 만들기</h3>
+
+    <div>
+        <label for="inputNumber01"></label>
+        <input type="number" id="inputNumber01">
+
+        <br><br>
+
+        <label for="inputNumber02"></label>
+        <input type="number" id="inputNumber02">
+
+        <button onclick="calc('+')">+</button>
+        <button onclick="calc('-')">-</button>
+        <button onclick="calc('*')">*</button>
+        <button onclick="calc('/')">/</button>
+        <button onclick="calc('%')">%</button>
+        <button onclick="calc('@')">@</button>
+
+        <h3>결과 : <span id="calcResult"></span></h3>
+    </div>
+
+
+    <script src="./js06.js"></script>
+</body>
+</html>
