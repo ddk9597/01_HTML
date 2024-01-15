@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>통장</title>
-
+    <title>입출금 기록</title>
     <link rel="stylesheet" href="./통장.css">
 </head>
 <body>
-    <h1>입금통장</h1>
 
-    <h1>잔액 : <span id="balance"></span></h1>
+    <div class="border1">
+        <div class="bgc01">
+            <h1 class="head">찬혁의 입출금 통장</h1>
+        </div>
 
-    <label for="inputAmount">입금액 : </label>
-    <input type="number" id="inputAmount"> <br><br>
+        <div class="bgc02">
+            <h1>현재 잔액 : <span id="balance"></span></h1>
+        </div>
 
-    <label for="userName">이용자 성명 : </label>
-    <input type="text" id="userName"> <br><br>
+        <div class="input bgc03">
+            <label for="inputAmount">거래 금액을 입력하세요 </label>
+            <input type="number" id="inputAmount"> 
+        </div>
 
-    <button onclick="deposit()">입금하기</button>
+        <div class="button bgc02">
+            <button onclick="deposit()">입금하기</button>
+            <button onclick="checkPassword()">출금하기</button>
+        </div>
+    </div>
 
-    <button onclick="checkPassword()">출금하기</button>
-
-    <h2>입출금 기록</h2>
-    <ul id="record"></ul>
-    
     <script src="./통장.js"></script>
 </body>
 </html>

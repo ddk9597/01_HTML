@@ -3,12 +3,9 @@ const password = "1234" ;
 const records = [] ;
 
 function updateBalance() {
-    document.getElementById("balance").innerText = balance + " 원" ;
-}
-
-function record(){
-    const list = document.getElementById("record");
-    list.innerText = "" ;
+    const balance02 = document.getElementById("balance") ;
+    balance02.innerText = balance.toLocaleString() + "원" ;
+    
 }
 
 function deposit() {
@@ -31,14 +28,14 @@ function checkPassword() {
         alert('취소') ;
     } else {
         if (enteredPassword === password) {
-            withdraw() ;
+            withdrawl() ;
         } else {
             alert("비밀번호가 일치하지 않습니다.") ;
         }
     }
 }
 
-function withdraw() {
+function withdrawl() {
     const amountInput = document.getElementById("inputAmount") ;
     const money = Number(amountInput.value) ;
 
@@ -47,6 +44,11 @@ function withdraw() {
         updateBalance() ;
         alert(`${money}원 출금되었습니다. 남은 잔액 : ${balance}원`) ;
     } else {
-        alert("출금액이 유효하지 않거나 잔액이 부족합니다.") ;
+        alert("출금 금액이 잔액보다 클 수 없습니다.") ;
     }
 }
+
+ // 페이지 로드 시 초기화
+ window.onload = function() {
+    updateBalance();
+};
